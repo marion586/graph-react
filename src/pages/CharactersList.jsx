@@ -14,7 +14,7 @@ export default function CharactersList() {
     <div className="CharacterList">
       {data.characters.results.map((character) => {
         return (
-          <Link to={`/${character.id}`}>
+          <Link to={`/${character.id}`} key={character.id}>
             <img src={character.image} alt="mon character " />
             <h2>{character.name}</h2>
           </Link>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import { gql, useLazyQuery } from "@apollo/client";
-import Character from "./Character";
 
 const GET_CHARACTER_LOCATIONS = gql`
   query GetCharacterLocations($name: String!) {
@@ -36,9 +35,11 @@ const Search = () => {
 
       {data && (
         <ul>
-          {data.charcters.results ? (
-            data.charcters.results.map((charcter) => {
-              return <li key={charcter.name}>{Character.location.name}</li>;
+          {data.characters.results ? (
+            data.characters.results.map((character) => {
+              return (
+                <li key={character.location.name}>{character.location.name}</li>
+              );
             })
           ) : (
             <div>data vide</div>

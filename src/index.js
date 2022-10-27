@@ -5,6 +5,21 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 //https://rickandmortyapi.com/graphql
+//mutations are ways to change our data
+//query viewing data
+//query update data
+// mutation {
+//   crete(record: {
+//     name: "Hotdog",
+//     supplierID:1,
+//     categoryID: 1 ,
+//     quantityPerUnit: "1"
+//   }){
+//     record {
+//       name
+//     }
+//   }
+// }
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
